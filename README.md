@@ -504,6 +504,9 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' 
 
 '
+
+
+
  ## OUTPUT
 ![alt text](image-46.png)
 
@@ -519,6 +522,9 @@ cat urllist.txt | tr -d ' ' | tr -s '.'
 
 
 tar -cvf backup.tar *
+
+
+
 
 
 ## OUTPUT
@@ -565,6 +571,12 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
 ./my-script.sh
+
+
+
+
+
+
 ## OUTPUT
 
 
@@ -600,6 +612,9 @@ ps
 ^d
  ```
 
+
+
+
 cat scriptest.sh 
 ```bash
 \#!/bin/sh
@@ -614,10 +629,18 @@ echo 'The $\# is ' $\#
 echo 'The $$ is ' $$
 ps
 ```
+
+
+
+
  
 chmod 777 scriptest.sh
  
 ./scriptest.sh 1 2 3
+
+
+
+
 
 ## OUTPUT
 
@@ -625,11 +648,19 @@ chmod 777 scriptest.sh
 ![alt text](image-61.png)
  
 ls file1
+
+
+
+
+
 ## OUTPUT
 
 
 ![alt text](image-57.png)
 echo $?
+
+
+
 
 ## OUTPUT 
 
@@ -640,7 +671,11 @@ echo $?
 bash: ./one: Permission denied
  
 echo $?
+
+
 ## OUTPUT 
+
+
 
 ![alt text](image-60.png)
  
@@ -661,6 +696,8 @@ fi
 ^d
 ```
 
+
+
 cat strcomp.sh 
 ```bash
 \#!/bin/bash
@@ -676,6 +713,9 @@ fi
  
 ./strcomp.sh
 
+
+
+
 # check file ownership
 cat < psswdperm.sh 
 ```bash
@@ -689,6 +729,9 @@ fi
 ^d
 ```
 
+
+
+
 cat psswdperm.sh 
 ```bash
 /#!/bin/bash
@@ -700,10 +743,18 @@ echo “Sorry, you are not the owner of the /etc/passwd file”
 fi
  ```
 ./psswdperm.sh
+
+
+
+
 ## OUTPUT
 
 
 ![alt text](image-63.png)
+
+
+
+
 
 # check if with file location
 
@@ -729,6 +780,10 @@ echo “Sorry, the object does not exist”
 fi
 ^d
 ```
+
+
+
+
 cat ifnested.sh 
 ```
 \#!/bin/bash
@@ -750,10 +805,16 @@ echo “Sorry, the object does not exist”
 fi
 ```
 
+
+
+
 ./ifnested.sh 
 
 ## OUTPUT
 ![alt text](image-64.png)
+
+
+
 
 
 # using numeric test comparisons
@@ -799,6 +860,10 @@ $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
 ##OUTPUT
+
+
+
+
 ![alt text](image-65.png)
 
 
@@ -852,6 +917,9 @@ $ chmod 755 ifnested.sh
 $ ./ifnested.sh 
 
 
+
+
+
 ##OUTPUT
 ![alt text](image-66.png)
 
@@ -882,15 +950,29 @@ fi
 
 
 
+
+
+
+
 $ chmod 755 elifcheck.sh
+
+
  
 $ ./elifcheck.sh 
 ## OUTPUT
 
 
+
+
+
 ![alt text](image-67.png)
 
 # testing compound comparisons
+
+
+
+
+
 
 
 cat> ifcompound.sh 
@@ -908,8 +990,16 @@ $ ./ifcompound.sh
 ## OUTPUT
 
 
+
+
+
 ![alt text](image-68.png)
 # using the case command
+
+
+
+
+
 
 
 cat >casecheck.sh 
@@ -926,15 +1016,26 @@ echo "$USER, Do not forget to log off when you're done";;
 echo "Sorry, you are not allowed here";;
 esac
 ```
+
+
+
+
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
  ## OUTPUT
 
+
+
+
  
  ![alt text](image-69.png)
 
 cat > whiletest
+
+
+
+
 ```bash
 #!/bin/bash
 #while command test
@@ -948,12 +1049,17 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
+
+
+
  ## OUTPUT
 
  
  ![alt text](image-70.png)
  
 cat untiltest.sh 
+
+
 ```bash
 \#using the until command
 var1=100
@@ -964,6 +1070,9 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
+
+
+
  ## output
 
  
@@ -978,6 +1087,9 @@ do
 echo The next state is $test
 done
  ```
+
+
+
  
 $ chmod 755 forin1.sh
  
@@ -991,6 +1103,8 @@ do
 echo “word:$test”
 done
  ```
+
+
  
 $ chmod 755 forin2.sh
  
@@ -1018,6 +1132,10 @@ done
 ```
 $ ./forin3.sh 
 
+
+
+
+
  
  ## output for forin1,forin2,forin3:
  
@@ -1037,6 +1155,8 @@ $ chmod 755 forctype.sh
 $ ./forctype.sh 
 
 
+
+
 cat forctype1.sh 
 ```bash
 #!/bin/bash
@@ -1050,6 +1170,7 @@ $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 
 ## output forctype ,forctype1;
+
 
 
 ![alt text](image-73.png)
@@ -1110,6 +1231,10 @@ $ ./forcontinue.sh
 ## OUTPUT
 ![alt text](image-75.png)
 
+
+
+
+
 cat funcex.sh
 ```bash
 #!/bin/bash
@@ -1125,6 +1250,8 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
+
+
 ## OUTPUT 
 
 
@@ -1144,6 +1271,7 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
+
 ## OUTPUT
 
 ![alt text](image-77.png)
@@ -1173,11 +1301,20 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
+
+
+
+
 ## OUTPUT 
 
 
 ![alt text](image-78.png)
 
+
+
+
 # RESULT:
+
+
 
 The Commands are executed successfully.
