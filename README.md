@@ -294,7 +294,10 @@ sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
 ![alt text](image-41.png)
 
+
 sed -n '2,4{s/$/*/;p}' file23
+## output
+
 ![alt text](image-42.png)
 
 #Sorting File content
@@ -486,8 +489,6 @@ fi
 ```chmod 755 strcomp.sh
  
 ./strcomp.sh 
-## OUTPUT
-[!alt text](image-62.png)
 
 # check file ownership
 cat < psswdperm.sh 
