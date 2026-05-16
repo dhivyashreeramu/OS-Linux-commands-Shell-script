@@ -20,6 +20,10 @@ To practice Linux Commands and Shell Scripting
 
 ### Step 1:
 
+
+
+
+
 Navigate to any Linux environment installed on the system or installed inside a virtual environment like virtual box/vmware or online linux JSLinux (https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192) or docker.
 
 
@@ -65,7 +69,14 @@ s.n. dasgupta
 
 
 cat < file1
+
+
+
 ## OUTPUT
+
+
+
+
 ![alt text](image.png)
 
 
@@ -73,7 +84,14 @@ cat < file1
 
 
 cat < file2
+
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-1.png)
 
 
@@ -84,7 +102,13 @@ cat < file2
 
 
 cmp file1 file2
+
+
+
 ## OUTPUT
+
+
+
  ![alt text](image-2.png)
 
 
@@ -92,7 +116,13 @@ cmp file1 file2
 
 
 comm file1 file2
+
+
+
  ## OUTPUT
+
+
+ 
 ![alt text](image-3.png)
 
 
@@ -102,7 +132,13 @@ comm file1 file2
 
  
 diff file1 file2
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-4.png)
 
 
@@ -114,6 +150,9 @@ diff file1 file2
 
 
 cat > file11
+
+
+
 ```
 Hello world
 This is my world
@@ -123,6 +162,9 @@ This is my world
 
 
 cat > file22
+
+
+
 ```
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
@@ -134,7 +176,13 @@ cat > file22
 
 
 cut -c1-3 file11
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-6.png)
 
 
@@ -143,6 +191,9 @@ cut -d "|" -f 1 file22
 
 
 ## OUTPUT
+
+
+
 ![alt text](image-5.png)
 
 
@@ -155,6 +206,10 @@ cut -d "|" -f 2 file22
 
 
 ## OUTPUT
+
+
+
+
 ![alt text](image-7.png)
 
 
@@ -182,7 +237,15 @@ hello world
 
  
 grep Hello newfile 
+
+
+
+
 ## OUTPUT
+
+
+
+
 ![alt text](image-8.png)
 
 
@@ -191,7 +254,13 @@ grep Hello newfile
 
 
 grep hello newfile 
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-9.png)
 
 
@@ -201,7 +270,14 @@ grep hello newfile
 
 
 grep -v hello newfile 
+
+
+
 ## OUTPUT
+
+
+
+
 ![alt text](image-10.png)
 
 
@@ -211,7 +287,15 @@ grep -v hello newfile
 
 
 cat newfile | grep -i "hello"
+
+
+
+
 ## OUTPUT
+
+
+
+
 ![alt text](image-11.png)
 
 
@@ -221,7 +305,15 @@ cat newfile | grep -i "hello"
 
 
 cat newfile | grep -i -c "hello"
+
+
+
+
 ## OUTPUT
+
+
+
+
 ![alt text](image-12.png)
 
 
@@ -231,7 +323,13 @@ cat newfile | grep -i -c "hello"
 
 
 grep -R ubuntu /etc
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-13.png)
 
 
@@ -240,7 +338,13 @@ grep -R ubuntu /etc
 
 
 grep -w -n world newfile   
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-14.png)
 
 
@@ -249,6 +353,9 @@ grep -w -n world newfile
 
 
 cat < newfile 
+
+
+
 ```
 Hello world
 hello world
@@ -259,6 +366,9 @@ Linux is best in this World
 ```
 
 cat > newfile
+
+
+
 ```
 Hello world
 hello world
@@ -270,81 +380,153 @@ Linux is best in this World
 
 
 egrep -w 'Hello|hello' newfile 
+
+
+
+
 ## OUTPUT
+
+
+
+
 ![alt text](image-15.png)
 
 
 
 
 egrep -w '(H|h)ello' newfile 
+
+
+
+
 ## OUTPUT
+
+
+
+
 ![alt text](image-16.png)
 
 
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-17.png)
+
+
+
 egrep '(^hello)' newfile 
 
 
 ## OUTPUT
+
+
 ![alt text](image-18.png)
 
 
 
 egrep '(world$)' newfile 
+
+
+
 ## OUTPUT
+
+
 ![alt text](image-19.png)
 
 
 
 egrep '(World$)' newfile 
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-20.png)
 
 
 
-egrep '((W|w)orld$)' newfile 
+egrep '((W|w)orld$)' newfile
+
+
 ## OUTPUT
+
+
 ![alt text](image-21.png)
 
 
 
 
 egrep '[1-9]' newfile 
+
+
+
 ## OUTPUT
+
+
 ![alt text](image-22.png)
 
 
 
 
 egrep 'Linux.*world' newfile 
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-23.png)
 
 
 
 egrep 'Linux.*World' newfile 
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-24.png)
 
 
 
 egrep l{2} newfile
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-25.png)
 
 
 
 egrep 's{1,2}' newfile
+
+
+
 ## OUTPUT 
+
+
+
 ![alt text](image-26.png)
 
 
 
 cat > file23
+
+
 ```
 1001 | Ram | 10000 | HR
 1001 | Ram | 10000 | HR
@@ -359,56 +541,119 @@ cat > file23
 
 
 sed -n -e '3p' file23
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-27.png)
 
 
 
 sed -n -e '$p' file23
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-28.png)
 
 
 sed  -e 's/Ram/Sita/' file23
+
+
+
 ## OUTPUT
+
+
+
+
 ![alt text](image-29.png)
 
 
 sed  -e '2s/Ram/Sita/' file23
+
+
+
+
 ## OUTPUT
+
+
+
+
 ![alt text](image-30.png)
 
 
 
 sed  '/tom/s/5000/6000/' file23
+
+
+
 ## OUTPUT
+
+
 ![alt text](image-31.png)
 
 
 
 sed -n -e '1,5p' file23
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-32.png)
 
 
 sed -n -e '2,/Joe/p' file23
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-33.png)
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-34.png)
 
 
 seq 10 
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-35.png)
 
 
 seq 10 | sed -n '4,6p'
+
+
+
+
 ## OUTPUT
+
+
+
 ![alt text](image-36.png)
 
 
