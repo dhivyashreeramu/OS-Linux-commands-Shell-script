@@ -370,11 +370,11 @@ gzip backup.tar
 
 ls .gz
 ## OUTPUT
- ![alt text](image-53.png)
+ ![alt text](image-87.png)
 
 gunzip backup.tar.gz
 ## OUTPUT
-![alt text](image-52.png)
+![alt text](image-86.png)
  
 # Shell Script
 ```
@@ -434,7 +434,7 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-![alt text](image-61.png)
+![alt text](image-88.png)
  
 ls file1
 ## OUTPUT
@@ -482,7 +482,7 @@ fi
  
 ./strcomp.sh 
 ## OUTPUT
-![alt text](image-62.png)
+![alt text](image-82.png)
 
 # check file ownership
 cat < psswdperm.sh 
@@ -556,7 +556,7 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
-![alt text](image-64.png)
+![alt text](image-89.png)
 
 
 # using numeric test comparisons
@@ -650,7 +650,7 @@ $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
 ##OUTPUT
-![alt text](image-66.png)
+![alt text](image-90.png)
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -746,7 +746,7 @@ done
 ``` 
 $ chmod 755 untiltest.sh
  ## output
- ![alt text](image-71.png)
+![alt text](image-71.png)
  
 cat forin1.sh 
 ```bash
@@ -760,7 +760,9 @@ done
  
 $ chmod 755 forin1.sh
  
- 
+ ##output 
+ ![alt text](image-80.png)
+
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -770,7 +772,7 @@ do
 echo “word:$test”
 done
  ```
- 
+
 $ chmod 755 forin2.sh
  
 cat forin2.sh 
@@ -785,7 +787,9 @@ done
 $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
- 
+ ##output
+
+ ![alt text](image-83.png)
 cat forin3.sh 
 ```bash
 \#!/bin/bash
@@ -797,9 +801,10 @@ done
 ```
 $ ./forin3.sh 
  
- ## output for forin1,forin2,forin3:
+ ## output 
+ ![alt text](image-81.png)
  
- ![alt text](image-72.png)
+ 
 
 
 cat forctype.sh 
@@ -814,6 +819,8 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
 
+##output
+![alt text](image-84.png)
 
 cat forctype1.sh 
 ```bash
@@ -827,7 +834,7 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## output forctype ,forctype1;
-![alt text](image-73.png)
+![alt text](image-85.png)
 
 cat fornested1.sh 
 ```bash
@@ -846,7 +853,7 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
-
+![alt text](image-79.png)
  
 cat forbreak.sh 
 ```bash
@@ -862,8 +869,8 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-## OUTPUT fornested,forbreak;
-![alt text](image-74.png)
+## OUTPUT 
+![alt text](image-73.png)
  
 cat forcontinue.sh 
 ```bash
@@ -882,7 +889,7 @@ echo "The for loop is completed“
  
 $ ./forcontinue.sh 
 ## OUTPUT
-![alt text](image-75.png)
+![alt text](image-74.png)
 
 cat funcex.sh
 ```bash
@@ -902,7 +909,72 @@ fi
 ## OUTPUT 
 ![alt text](image-76.png)
 
- cat argshift1.sh
+cat exread.sh
+```bash
+#!/bin/bash
+# testing the read command
+echo -n "Enter your name: "
+read name
+echo "Hello $name, welcome to my program. "
+```
+$ chmod 755 exread.sh
+
+$ ./exread.sh
+## output
+![alt text](image-75.png)
+
+cat exread1.sh
+```bash
+#!/bin/bash
+# testing the read command
+read -p "Enter your name: " name
+echo "Hello $name, welcome to my program. “
+```
+$ chmod 755 exread1.sh
+
+$ ./exread1.sh
+
+## output
+![alt text](image-91.png)
+
+cat funcex.sh
+```bash
+#!/bin/bash
+# trying to access script parameters inside a function
+function func {
+echo $[ $1 * $2 ]
+}
+if [ $# -eq 2 ]
+then
+value=`func $1 $2`
+echo "The result is $value"
+else
+echo "Usage: badtest1 a b"
+fi
+```
+./funcex.sh
+
+./funcex.sh 1 2
+
+## output
+![alt text](image-92.png)
+
+cat argshift.sh
+```bash
+#!/bin/bash 
+ while (( "$#" )); do 
+  echo $1 
+  shift 
+done
+```
+$ chmod 777 argshift.sh
+
+$ ./argshift.sh 1 2 3
+## output
+![alt text](image-93.png)
+
+cat argshift1.sh
+
 ```bash
  #/bin/bash 
  # store arguments in a special array 
@@ -916,9 +988,59 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
-## OUTPUT
 
-![alt text](image-77.png)
+$ ./argshift.sh 1 2 3
+
+## output 
+![alt text](image-94.png)
+
+cat argshift.sh
+```bash
+#!/bin/bash 
+set -x 
+while (( "$#" )); do 
+  echo $1 
+  shift 
+done
+set +x
+```
+./argshift.sh 1 2 3
+
+## output 
+![alt text](image-61.png)
+
+cat > nc.awk
+```bash
+BEGIN{}
+{
+print len=length($0),"\t",$0 
+wordcount+=NF
+chrcnt+=len
+}
+END {
+print "total characters",chrcnt 
+print "Number of Lines are",NR
+print "No of Words count:",wordcount
+}
+```
+cat>data.dat
+```bash
+bcdfghj
+abcdfghj
+bcdfghj
+ebcdfghj
+bcdfghj
+ibcdfghj
+bcdfghj
+obcdfghj
+bcdfghj
+ubcdfghj
+
+awk -f nc.awk data.dat
+
+##output
+![alt text](image-64.png)
+
 
 cat > palindrome.sh
 ```bash
@@ -946,6 +1068,8 @@ else
 fi
 ```
 ## OUTPUT 
+
+
 ![alt text](image-78.png)
 
 # RESULT:
