@@ -488,7 +488,7 @@ echo "$val1 is less than $val2"
 fi
 ```chmod 755 strcomp.sh
  
-./strcomp.sh 
+./strcomp.sh
 
 # check file ownership
 cat < psswdperm.sh 
