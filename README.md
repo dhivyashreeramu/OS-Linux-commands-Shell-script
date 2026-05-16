@@ -60,6 +60,7 @@ comm file1 file2
 diff file1 file2
 ## OUTPUT
 ![alt text](image-4.png)
+
 #Filters
 
 ### Create the following files file11, file22 as follows:
@@ -135,6 +136,8 @@ grep -R ubuntu /etc
 grep -w -n world newfile   
 ## OUTPUT
 ![alt text](image-14.png)
+
+
 cat < newfile 
 ```
 Hello world
@@ -204,6 +207,7 @@ egrep l{2} newfile
 egrep 's{1,2}' newfile
 ## OUTPUT 
 ![alt text](image-26.png)
+
 cat > file23
 ```
 1001 | Ram | 10000 | HR
@@ -483,7 +487,7 @@ fi
  
 ./strcomp.sh 
 ## OUTPUT
-![alt text](image-62.png)
+
 
 # check file ownership
 cat < psswdperm.sh 
