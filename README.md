@@ -1,6 +1,8 @@
 # OS-Linux-commands-Shell-scripting
+
 Operating systems Lab exercise
 # Linux commands-Shell scripting
+
 Linux commands-Shell scripting
 
 # AIM:
@@ -22,6 +24,8 @@ Testing the commands for the desired output.
 
 # COMMANDS:
 ### Create the following files file1, file2 as follows:
+
+
 cat > file1
 ```
 chanchal singhvi
@@ -30,6 +34,8 @@ s.n. dasgupta
 sumit chakrobarty
 ^d
 ```
+
+
 cat > file2
 ```
 anil aggarwal
@@ -40,6 +46,8 @@ s.n. dasgupta
 ^d
 ```
 ### Display the content of the files
+
+
 cat < file1
 ## OUTPUT
 ![alt text](image.png)
@@ -48,14 +56,22 @@ cat < file1
 cat < file2
 ## OUTPUT
 ![alt text](image-1.png)
+
+
 # Comparing Files
+
+
 cmp file1 file2
 ## OUTPUT
  ![alt text](image-2.png)
 
+
+
 comm file1 file2
  ## OUTPUT
 ![alt text](image-3.png)
+
+
  
 diff file1 file2
 ## OUTPUT
@@ -64,6 +80,7 @@ diff file1 file2
 #Filters
 
 ### Create the following files file11, file22 as follows:
+
 
 cat > file11
 ```
@@ -104,10 +121,13 @@ hello world
 cat > newfile 
 Hello world
 hello world
+
+
  
 grep Hello newfile 
 ## OUTPUT
 ![alt text](image-8.png)
+
 
 
 grep hello newfile 
@@ -125,13 +145,19 @@ cat newfile | grep -i "hello"
 ## OUTPUT
 ![alt text](image-11.png)
 
+
+
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 ![alt text](image-12.png)
 
+
+
 grep -R ubuntu /etc
 ## OUTPUT
 ![alt text](image-13.png)
+
+
 
 grep -w -n world newfile   
 ## OUTPUT
@@ -157,9 +183,13 @@ Unix is predecessor
 Linux is best in this World
 ^d
  ```
+
+
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
 ![alt text](image-15.png)
+
+
 
 
 egrep -w '(H|h)ello' newfile 
@@ -167,24 +197,36 @@ egrep -w '(H|h)ello' newfile
 ![alt text](image-16.png)
 
 
+
+
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 ![alt text](image-17.png)
 egrep '(^hello)' newfile 
+
+
 ## OUTPUT
 ![alt text](image-18.png)
+
+
 
 egrep '(world$)' newfile 
 ## OUTPUT
 ![alt text](image-19.png)
 
+
+
 egrep '(World$)' newfile 
 ## OUTPUT
 ![alt text](image-20.png)
 
+
+
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 ![alt text](image-21.png)
+
+
 
 
 egrep '[1-9]' newfile 
@@ -192,21 +234,31 @@ egrep '[1-9]' newfile
 ![alt text](image-22.png)
 
 
+
+
 egrep 'Linux.*world' newfile 
 ## OUTPUT
 ![alt text](image-23.png)
+
+
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
 ![alt text](image-24.png)
 
+
+
 egrep l{2} newfile
 ## OUTPUT
 ![alt text](image-25.png)
 
+
+
 egrep 's{1,2}' newfile
 ## OUTPUT 
 ![alt text](image-26.png)
+
+
 
 cat > file23
 ```
@@ -227,6 +279,7 @@ sed -n -e '3p' file23
 ![alt text](image-27.png)
 
 
+
 sed -n -e '$p' file23
 ## OUTPUT
 ![alt text](image-28.png)
@@ -242,9 +295,11 @@ sed  -e '2s/Ram/Sita/' file23
 ![alt text](image-30.png)
 
 
+
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 ![alt text](image-31.png)
+
 
 
 sed -n -e '1,5p' file23
@@ -277,13 +332,19 @@ seq 10 | sed -n '2,~4p'
 ## OUTPUT
 ![alt text](image-37.png)
 
+
+
 seq 3 | sed '2a hello'
 ## OUTPUT
 ![alt text](image-38.png)
 
+
+
 seq 2 | sed '2i hello'
 ## OUTPUT
 ![alt text](image-39.png)
+
+
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
@@ -295,12 +356,18 @@ sed -n '2,4{s/^/$/;p}' file23
 ![alt text](image-41.png)
 
 
+
+
 sed -n '2,4{s/$/*/;p}' file23
 ## output
 
 ![alt text](image-42.png)
 
+
+
 #Sorting File content
+
+
 cat > file21
 ```
 1001 | Ram | 10000 | HR
@@ -330,10 +397,15 @@ uniq file22
 #Using tr command
 
 cat file22 | tr [:lower:] [:upper:]
+
+
  ## OUTPUT
 ![alt text](image-45.png)
+
+
 cat < urllist.txt
 ```
+
 www. yahoo. com
 www. google. com
 www. mrcet.... com
@@ -345,18 +417,26 @@ www. yahoo. com
 www. google. com
 www. mrcet.... com
  ```
-cat urllist.txt | tr -d ' '
+cat urllist.txt | tr -d ' 
+
+'
  ## OUTPUT
 ![alt text](image-46.png)
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
+
+
 ## OUTPUT
 ![alt text](image-47.png)
 
 
 #Backup commands
+
+
 tar -cvf backup.tar *
+
+
 ## OUTPUT
 ![alt text](image-48.png)
 
@@ -368,23 +448,33 @@ cd backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
+
+
 ![alt text](image-49.png)
 
 tar -xvf backup.tar
 ## OUTPUT
+
+
 ![alt text](image-51.png)
 
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
+
+
  ![alt text](image-53.png)
 
 gunzip backup.tar.gz
 ## OUTPUT
+
+
 ![alt text](image-52.png)
  
 # Shell Script
+
+
 ```
 echo '#!/bin/sh' > my-script.sh
 echo 'echo Hello World‘; exit 0 >> my-script.sh
@@ -392,6 +482,8 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
+
+
 ![alt text](image-56.png)
  
 cat << stop > herecheck.txt
@@ -404,6 +496,8 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
+
+
 ![alt text](image-55.png)
 
 cat < scriptest.sh 
@@ -442,13 +536,20 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
+
+
 ![alt text](image-61.png)
  
 ls file1
 ## OUTPUT
+
+
 ![alt text](image-57.png)
 echo $?
+
 ## OUTPUT 
+
+
 ![alt text](image-59.png)
 
 ./one
@@ -456,6 +557,7 @@ bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
+
 ![alt text](image-60.png)
  
  
@@ -515,9 +617,13 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+
+
 ![alt text](image-63.png)
 
 # check if with file location
+
+
 cat>ifnested.sh 
 ```bash
 \#!/bin/bash
@@ -561,11 +667,14 @@ fi
 ```
 
 ./ifnested.sh 
+
 ## OUTPUT
 ![alt text](image-64.png)
 
 
 # using numeric test comparisons
+
+
 cat > iftest.sh 
 ```bash
 \#!/bin/bash
@@ -607,6 +716,8 @@ $ chmod 755 iftest.sh
 $ ./iftest.sh 
 ##OUTPUT
 ![alt text](image-65.png)
+
+
 
 # check if a file
 cat > ifnested.sh 
@@ -655,8 +766,12 @@ fi
 $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
+
+
 ##OUTPUT
 ![alt text](image-66.png)
+
+
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -681,13 +796,19 @@ echo "Sorry, you are not allowed here"
 fi
 ```
 
+
+
 $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
+
+
 ![alt text](image-67.png)
 
 # testing compound comparisons
+
+
 cat> ifcompound.sh 
 ```bash
 \#!/bin/bash
@@ -701,8 +822,12 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
+
+
 ![alt text](image-68.png)
 # using the case command
+
+
 cat >casecheck.sh 
 ```bash
 case $USER in
@@ -721,6 +846,8 @@ $ chmod 755 casecheck.sh
  
 $ ./casecheck.sh 
  ## OUTPUT
+
+ 
  ![alt text](image-69.png)
 
 cat > whiletest
@@ -738,6 +865,8 @@ $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
  ## OUTPUT
+
+ 
  ![alt text](image-70.png)
  
 cat untiltest.sh 
@@ -752,6 +881,8 @@ done
 ``` 
 $ chmod 755 untiltest.sh
  ## output
+
+ 
  ![alt text](image-71.png)
  
 cat forin1.sh 
@@ -802,6 +933,7 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
+
  
  ## output for forin1,forin2,forin3:
  
@@ -832,7 +964,10 @@ done
 ```
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
+
 ## output forctype ,forctype1;
+
+
 ![alt text](image-73.png)
 
 cat fornested1.sh 
@@ -869,6 +1004,7 @@ done
 echo "The for loop is completed“
 ```
 ## OUTPUT fornested,forbreak;
+
 ![alt text](image-74.png)
  
 cat forcontinue.sh 
@@ -906,6 +1042,8 @@ echo "Usage: badtest1 a b"
 fi
 ```
 ## OUTPUT 
+
+
 ![alt text](image-76.png)
 
  cat argshift1.sh
@@ -952,7 +1090,10 @@ else
 fi
 ```
 ## OUTPUT 
+
+
 ![alt text](image-78.png)
 
 # RESULT:
+
 The Commands are executed successfully.
