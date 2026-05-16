@@ -487,7 +487,7 @@ fi
  
 ./strcomp.sh 
 ## OUTPUT
-
+[!alt text](image-62.png)
 
 # check file ownership
 cat < psswdperm.sh 
