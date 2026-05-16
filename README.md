@@ -306,10 +306,12 @@ seq 10 | sed '2,9c hello'
 
 
 sed -n '2,4{s/^/$/;p}' file23
+
 ## OUTPUT
 ![alt text](image-41.png)
 
 sed -n '2,4{s/$/*/;p}' file23
+
 ![alt text](image-42.png)
 
 #Sorting File content
