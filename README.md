@@ -1,5 +1,9 @@
+# OS-Linux-commands-Shell-scripting
+Operating systems Lab exercise
 
-<<<<<<< HEAD
+# Linux commands-Shell scripting
+Linux commands-Shell scripting
+
 # AIM:
 To practice Linux Commands and Shell Scripting
 
@@ -1071,5 +1075,5 @@ fi
 
 # RESULT:
 The Commands are executed successfully.
-=======
->>>>>>> 70b06e8c09015e97ddd74eecc380dc9a75a3dea0
+
+
