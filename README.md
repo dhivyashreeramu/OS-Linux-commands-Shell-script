@@ -1,12 +1,20 @@
 # OS-Linux-commands-Shell-scripting
 
+
+
 Operating systems Lab exercise
 # Linux commands-Shell scripting
 
+
+
 Linux commands-Shell scripting
+
+
 
 # AIM:
 To practice Linux Commands and Shell Scripting
+
+
 
 # DESIGN STEPS:
 
@@ -14,13 +22,16 @@ To practice Linux Commands and Shell Scripting
 
 Navigate to any Linux environment installed on the system or installed inside a virtual environment like virtual box/vmware or online linux JSLinux (https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192) or docker.
 
+
 ### Step 2:
 
 Execute the following commands
 
+
 ### Step 3:
 
 Testing the commands for the desired output. 
+
 
 # COMMANDS:
 ### Create the following files file1, file2 as follows:
@@ -36,6 +47,8 @@ sumit chakrobarty
 ```
 
 
+
+
 cat > file2
 ```
 anil aggarwal
@@ -45,6 +58,9 @@ lalit chowdury
 s.n. dasgupta
 ^d
 ```
+
+
+
 ### Display the content of the files
 
 
@@ -53,9 +69,15 @@ cat < file1
 ![alt text](image.png)
 
 
+
+
+
 cat < file2
 ## OUTPUT
 ![alt text](image-1.png)
+
+
+
 
 
 # Comparing Files
@@ -67,15 +89,24 @@ cmp file1 file2
 
 
 
+
+
 comm file1 file2
  ## OUTPUT
 ![alt text](image-3.png)
+
+
+
+
 
 
  
 diff file1 file2
 ## OUTPUT
 ![alt text](image-4.png)
+
+
+
 
 #Filters
 
@@ -88,6 +119,9 @@ Hello world
 This is my world
 ^d
 ```
+
+
+
 cat > file22
 ```
 1001 | Ram | 10000 | HR
@@ -97,6 +131,8 @@ cat > file22
 ```
 
 
+
+
 cut -c1-3 file11
 ## OUTPUT
 ![alt text](image-6.png)
@@ -104,13 +140,25 @@ cut -c1-3 file11
 
 
 cut -d "|" -f 1 file22
+
+
 ## OUTPUT
 ![alt text](image-5.png)
 
 
+
+
+
+
+
 cut -d "|" -f 2 file22
+
+
 ## OUTPUT
 ![alt text](image-7.png)
+
+
+
 
 cat < newfile 
 ```
@@ -118,9 +166,18 @@ Hello world
 hello world
 ^d
 ````
+
+
+
+
+
+
 cat > newfile 
 Hello world
 hello world
+
+
+
 
 
  
@@ -130,9 +187,16 @@ grep Hello newfile
 
 
 
+
+
+
 grep hello newfile 
 ## OUTPUT
 ![alt text](image-9.png)
+
+
+
+
 
 
 
@@ -141,9 +205,18 @@ grep -v hello newfile
 ![alt text](image-10.png)
 
 
+
+
+
+
+
 cat newfile | grep -i "hello"
 ## OUTPUT
 ![alt text](image-11.png)
+
+
+
+
 
 
 
@@ -153,15 +226,26 @@ cat newfile | grep -i -c "hello"
 
 
 
+
+
+
+
 grep -R ubuntu /etc
 ## OUTPUT
 ![alt text](image-13.png)
 
 
 
+
+
+
 grep -w -n world newfile   
 ## OUTPUT
 ![alt text](image-14.png)
+
+
+
+
 
 
 cat < newfile 
