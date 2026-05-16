@@ -48,11 +48,14 @@ cat < file1
 
 cat < file2
 ## OUTPUT
+
 ![alt text](image-1.png)
 # Comparing Files
+
 cmp file1 file2
 ## OUTPUT
  ![alt text](image-2.png)
+ 
 comm file1 file2
  ## OUTPUT
 ![alt text](image-3.png)
@@ -60,6 +63,8 @@ comm file1 file2
 diff file1 file2
 ## OUTPUT
 ![alt text](image-4.png)
+
+
 #Filters
 
 ### Create the following files file11, file22 as follows:
@@ -110,6 +115,7 @@ grep Hello newfile
 
 
 grep hello newfile 
+
 ## OUTPUT
 ![alt text](image-9.png)
 
@@ -121,18 +127,22 @@ grep -v hello newfile
 
 
 cat newfile | grep -i "hello"
+
 ## OUTPUT
 ![alt text](image-11.png)
 
 cat newfile | grep -i -c "hello"
+
 ## OUTPUT
 ![alt text](image-12.png)
 
 grep -R ubuntu /etc
+
 ## OUTPUT
 ![alt text](image-13.png)
 
-grep -w -n world newfile   
+grep -w -n world newfile 
+
 ## OUTPUT
 ![alt text](image-14.png)
 cat < newfile 
@@ -155,36 +165,45 @@ Linux is best in this World
 ^d
  ```
 egrep -w 'Hello|hello' newfile 
+
 ## OUTPUT
 ![alt text](image-15.png)
 
 
-egrep -w '(H|h)ello' newfile 
+egrep -w '(H|h)ello' newfile
+
 ## OUTPUT
 ![alt text](image-16.png)
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
+
 ## OUTPUT
 ![alt text](image-17.png)
+
 egrep '(^hello)' newfile 
+
 ## OUTPUT
 ![alt text](image-18.png)
 
 egrep '(world$)' newfile 
+
 ## OUTPUT
 ![alt text](image-19.png)
 
 egrep '(World$)' newfile 
+
 ## OUTPUT
 ![alt text](image-20.png)
 
-egrep '((W|w)orld$)' newfile 
+egrep '((W|w)orld$)' newfile
+
 ## OUTPUT
 ![alt text](image-21.png)
 
 
 egrep '[1-9]' newfile 
+
 ## OUTPUT
 ![alt text](image-22.png)
 
@@ -482,7 +501,7 @@ fi
 ```chmod 755 strcomp.sh
  
 ./strcomp.sh 
-## OUTPUT
+#OUTPUT
 ![alt text](image-82.png)
 
 # check file ownership
@@ -1040,6 +1059,7 @@ ubcdfghj
 awk -f nc.awk data.dat
 
 ##output
+
 ![alt text](image-64.png)
 
 
